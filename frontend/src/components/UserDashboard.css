@@ -1,0 +1,151 @@
+.info,.request-info {
+  background-color: #f9f9f9; /* Light background for the card */
+  border: 1px solid #0d0d0d; /* Light border around the card */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 400px; /* Maximum width of the card */
+  margin: 20px auto; /* Centering the card */
+  text-align: center; /* Center text inside the card */
+}
+
+.info h2 {
+  font-size: 24px; /* Size of the main heading */
+  color: #fe8802; /* Dark color for the heading */
+  margin-bottom: 15px; /* Space below the heading */
+}
+
+.info p {
+  font-size: 20px; /* Size of the subheading */
+  color: #161515; /* Slightly lighter color for subheading */
+  margin: 10px 0; /* Space above and below the subheading */
+}
+
+.info h3 {
+  font-size: 20px; /* Size of the subheading */
+  color: #555; /* Slightly lighter color for subheading */
+  margin: 10px 0; /* Space above and below the subheading */
+}
+
+.info button {
+  background-color: #007bff; /* Blue background for the button */
+  color: white; /* White text on the button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+  padding: 10px 15px; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size of the button text */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.info button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Modal specific styles */
+.modal .modal-body {
+  background-color: #fff; /* White background for modal */
+}
+
+.modal .modal-header {
+  border-bottom: 1px solid #ddd; /* Light border for header */
+}
+
+.modal .modal-footer {
+  border-top: 1px solid #ddd; /* Light border for footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .info {
+      max-width: 50%; /* Allow the card to take up more width on smaller screens */
+      padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .info h2 {
+      font-size: 20px; /* Smaller font size for headings */
+  }
+
+  .info p,
+  .info h3 {
+      font-size: 18px; /* Smaller font size for paragraphs and subheadings */
+  }
+
+  .info button {
+      width: 100%; /* Make the button full width */
+      font-size: 14px; /* Smaller font size for buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+      padding: 10px; /* Further reduce padding on very small screens */
+  }
+
+  .info h2 {
+      font-size: 18px; /* Even smaller font size for headings */
+  }
+
+  .info p,
+  .info h3 {
+      font-size: 16px; /* Even smaller font size for paragraphs and subheadings */
+  }
+
+  .info button {
+      padding: 8px; /* Adjust button padding */
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.requests-status{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

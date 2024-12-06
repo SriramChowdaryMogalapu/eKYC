@@ -1,0 +1,88 @@
+.info {
+    background-color: #f9f9f9; /* Light background for the card */
+    border: 1% solid #ddd; /* Light border around the card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 2% 10% rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Centering the card */
+    text-align: center; /* Center text inside the card */
+  }
+  
+  .info h2 {
+    font-size: 24px; /* Size of the main heading */
+    color: #fe8802; /* Dark color for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+  }
+  
+  .info p {
+    font-size: 20px; /* Size of the subheading */
+    color: #161515; /* Slightly lighter color for subheading */
+    margin: 10px 0; /* Space above and below the subheading */
+  }
+  
+  .info h3 {
+    font-size: 20px; /* Size of the subheading */
+    color: #555; /* Slightly lighter color for subheading */
+    margin: 10px 0; /* Space above and below the subheading */
+  }
+  
+  .info button {
+    background-color: #007bff; /* Blue background for the button */
+    color: white; /* White text on the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for the button */
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size of the button text */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .info button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .info {
+      max-width: 50%; /* Allow the card to take up more width on smaller screens */
+      padding: 15px; /* Reduce padding on smaller screens */
+    }
+  
+    .info h2 {
+      font-size: 20px; /* Smaller font size for headings */
+    }
+  
+    .info p,
+    .info h3 {
+      font-size: 18px; /* Smaller font size for paragraphs and subheadings */
+    }
+  
+    .info button {
+      width: 100%; /* Make the button full width */
+      font-size: 14px; /* Smaller font size for buttons */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info {
+      padding: 10px; /* Further reduce padding on very small screens */
+    }
+  
+    .info h2 {
+      font-size: 18px; /* Even smaller font size for headings */
+    }
+  
+    .info p,
+    .info h3 {
+      font-size: 16px; /* Even smaller font size for paragraphs and subheadings */
+    }
+  
+    .info button {
+      padding: 8px; /* Adjust button padding */
+    }
+  }
+  .requests-status{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }

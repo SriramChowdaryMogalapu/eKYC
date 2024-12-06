@@ -1,0 +1,42 @@
+.mini-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.shine {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor : pointer;
+  transition: background-color 0.3s;
+}
+
+.shine:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 576px) {
+  .mini-container {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 50%;
+    height: auto;
+  }
+}
