@@ -245,7 +245,6 @@ exports.uploadUserKyc = async (req, res) => {
     await fiuser.save();
     console.log("Request Successful!!");
     res.status(201).json({ uploaded: "Successful!" });
-    await addKYCRecord(username, fullName, phonenumber, aadharnumber, ipfsHash);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -273,7 +272,6 @@ exports.requestAccess = async (req, res) => {
     await user.save();
     await fiuser.save();
     res.status(201).json({ uploaded: "Access request sent successfully!" });
-    await recordAccessRequest(username, fiusername, 'Access Requested');
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -300,7 +298,6 @@ exports.requestVerification = async (req, res) => {
     await user.save();
     await fiuser.save();
     res.status(201).json({ uploaded: "Successful!" });
-    await fabricHelper.recordAccessRequest(username, fiusername, 'Ekyc Request');
   }
   catch (error) {
     res.status(500).json({ error: error.message });
@@ -326,7 +323,6 @@ exports.acceptRequest = async (req, res) => {
     console.log(user);
     await user.save();
     res.status(201).json({ Accepted: "Accepted" });
-    await fabricHelper.recordAccessRequest(username, fiusername, 'Accepted Request');
   }
   catch (error) {
     res.status(500).json({ error: error.message });
@@ -369,7 +365,6 @@ exports.verifyRequest = async (req, res) => {
       verificationId,
       signature
     });
-    await updateKYCStatus(username,fiusername, "Verified");
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -394,7 +389,6 @@ exports.rejectAccessRequest = async (req, res) => {
     await user.save();
     await fiuser.save();
     res.status(201).json({ Accepted: "Accepted" });
-    await updateKYCStatus(username, fiusername, 'Rejected');
   }
   catch (error) {
     res.status(500).json({ error: error.message });
@@ -420,7 +414,6 @@ exports.rejectRequest = async (req, res) => {
     await user.save();
     await fiuser.save();
     res.status(201).json({ Rejected: "Rejected" });
-    await updateKYCStatus(username,fiusername, "Rejected");
   }
   catch (error) {
     res.status(500).json({ error: error.message });
