@@ -11,7 +11,7 @@ const AccessButton = ({ fiusername, username }) => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/auth/getUserKycData",
+          "https://ekyc-8o9a.onrender.com/api/auth/getUserKycData",
           {
             username,
           }
@@ -46,7 +46,7 @@ const AccessButton = ({ fiusername, username }) => {
   const handleAccessRequest = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/request-access",
+        "https://ekyc-8o9a.onrender.com/api/auth/request-access",
         {
           fiusername,
           username,
