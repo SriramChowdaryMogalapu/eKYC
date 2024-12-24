@@ -16,7 +16,7 @@ const Login = () => {
     try {
       // Directly make the API call here
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://ekyc-8o9a.onrender.com/api/auth/login",
         {
           username,
           password,
