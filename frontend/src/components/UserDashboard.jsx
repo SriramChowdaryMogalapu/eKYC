@@ -36,7 +36,7 @@ function Modal({ isOpen, onClose, fiUsers, username }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/upload-user-kyc",
+        "https://ekyc-8o9a.onrender.com/api/auth/upload-user-kyc",
         formData,
         {
           headers: {
