@@ -21,7 +21,7 @@ function Modal({ isOpen, onClose, fiUsers, username }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/upload",
+        "https://ekyc-8o9a.onrender.com/api/auth/upload",
         {
           username,
           fullName,
@@ -146,7 +146,7 @@ const FIDashboard = () => {
 
   const fetchFiUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/auth/getFis");
+      const response = await axios.get("https://ekyc-8o9a.onrender.com/api/auth/getFis");
       setFiUsers(response.data?.fis);
     } catch (error) {
       console.error("Error fetching FI users:", error);
@@ -156,7 +156,7 @@ const FIDashboard = () => {
 
   const handleVerify = async (fiusername, username) => {
     try {
-      await axios.post("http://localhost:5000/api/auth/verify-request", {
+      await axios.post("https://ekyc-8o9a.onrender.com/api/auth/verify-request", {
         fiusername,
         username,
       });
@@ -168,7 +168,7 @@ const FIDashboard = () => {
 
   const handleReject = async (fiusername, username) => {
     try {
-      await axios.post("http://localhost:5000/api/auth/reject-request", {
+      await axios.post("https://ekyc-8o9a.onrender.com/api/auth/reject-request", {
         fiusername,
         username,
       });
@@ -188,7 +188,7 @@ const FIDashboard = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/auth/user",
+          "https://ekyc-8o9a.onrender.com/api/auth/user",
           {
             headers: {
               Authorization: `Bearer ${token}`,
