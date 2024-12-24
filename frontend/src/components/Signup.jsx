@@ -22,7 +22,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "https://ekyc-8o9a.onrender.com/api/auth/signup",
         {
           username,
           fullName,
