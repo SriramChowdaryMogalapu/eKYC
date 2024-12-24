@@ -13,7 +13,7 @@ const VerificationPage = () => {
     try {
       // Fetch user KYC data
       console.log("Username"+username);
-      const response = await axios.get(`http://localhost:5000/api/auth/getUserKycData?username=${username}`);
+      const response = await axios.get(`https://ekyc-8o9a.onrender.com/api/auth/getUserKycData?username=${username}`);
       console.log("Response"+response);
       if (!response.data) {
         throw new Error("Failed to fetch user data");
