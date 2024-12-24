@@ -16,7 +16,7 @@ const VerifyOtp = () => {
         alert("All fields are required!!");
       } else {
         const response = await axios.post(
-          "http://localhost:5000/api/auth/verify-otp",
+          "https://ekyc-8o9a.onrender.com/api/auth/verify-otp",
           {
             email,
             otp,
@@ -40,7 +40,7 @@ const VerifyOtp = () => {
         alert("Email is required!!");
       } else {
         const response = await axios.post(
-          "http://localhost:5000/api/auth/resend-otp",
+          "https://ekyc-8o9a.onrender.com/api/auth/resend-otp",
           {
             email,
           }
