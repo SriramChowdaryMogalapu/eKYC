@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:3000' // Allow your frontend's origin
+  origin: 'https://msrc-ekyc-verification.netlify.app' // Allow your frontend's origin
 }));
 
 app.use(express.json());
